@@ -57,9 +57,10 @@
             display: block;
             margin: 0 auto !important;
             /* makes it centered */
-            max-width: 580px;
+            max-width: 695px;
             padding: 10px;
-            width: 580px;
+            padding-bottom: 0px;
+            width: 695px;
         }
 
         /* This should also be a block element, so that it will fill 100% of the .container */
@@ -67,8 +68,9 @@
             box-sizing: border-box;
             display: block;
             margin: 0 auto;
-            max-width: 580px;
+            max-width: 695px;
             padding: 10px;
+            padding-bottom: 0px;
         }
 
         /* -------------------------------------
@@ -76,14 +78,13 @@
       ------------------------------------- */
         .main {
             background: #0D151E;
-            border: 2px solid #2B3B4A;
-            border-radius: 6px;
             width: 100%;
         }
 
         .wrapper {
             box-sizing: border-box;
             padding: 20px;
+
         }
 
         .content-block {
@@ -102,7 +103,7 @@
         .footer p,
         .footer span,
         .footer a {
-            color: #12FF9C;
+            color: #000000;
             font-size: 12px;
             text-align: center;
         }
@@ -174,10 +175,6 @@
             width: 100%;
         }
 
-        .btn>tbody>tr>td {
-            padding-bottom: 15px;
-        }
-
         .btn table {
             width: auto;
         }
@@ -205,12 +202,54 @@
 
         .btn-primary table td {
             background: linear-gradient(90.29deg, #DF5392 14.42%, #CE16DB 91.25%);
+            border-bottom: 0px;
         }
 
         .btn-primary a {
             background: linear-gradient(90.29deg, #DF5392 14.42%, #CE16DB 91.25%);
-            ;
             color: #ffffff;
+            border-bottom: 0px;
+        }
+
+        /* -------------------------------------
+          CUSTOM STYLING
+      ------------------------------------- */
+
+        .logo img {
+            width: 100px;
+        }
+
+        .sub-logo img {
+            width: 180px;
+        }
+
+        .titles h1,
+        h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .titles a {
+            text-decoration: none;
+            color: #4E5D6C;
+        }
+
+        .container td {
+            border-bottom: #ff000000 solid 40px;
+        }
+
+        td.wrapper {
+            border-bottom: 0px;
+        }
+
+        .title-info h3,
+        p {
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        .title-info p {
+            color: #12FF9C;
         }
 
         /* -------------------------------------
@@ -359,14 +398,6 @@
                 line-height: inherit;
             }
 
-            .btn-primary table td:hover {
-                background-color: #34495e !important;
-            }
-
-            .btn-primary a:hover {
-                background-color: #34495e !important;
-                border-color: #34495e !important;
-            }
         }
     </style>
 </head>
@@ -375,7 +406,6 @@
     <span class="preheader">This link is valid for 24 hours.</span>
     <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="body">
         <tr>
-            <td> </td>
             <td class="container">
                 <div class="content">
 
@@ -386,50 +416,71 @@
                         <tr>
                             <td class="wrapper">
                                 <table role="presentation" border="0" cellpadding="0" cellspacing="0">
-                                    <tr>
-                                        <td align="center">
-                                            <img width="107"
-                                                src="https://raw.githubusercontent.com/davidoost/constants/main/logos/eva.png" />
-                                            <h1>This is a tietel</h1>
-                                            <h2>This is a subtitle</h2>
-                                            <h3>Highlights</h3>
-                                            <h4># Manage all facets of your price lists and adjustments with
-                                                PushPriceList</h4>
-                                            <h4># Check the order orchestration results with GetOrderFulfillment</h4>
-                                            <br />
-                                            <h3>Release dates</h3>
-                                            <h4>Released on all test and acceptance environments on 30/08/2022</h4>
-                                            <br />
-                                            <h4>Will be released to production in EUW and ASE on 05/09/2022</h4>
-                                            <br />
-                                            <h4>Will be released to production in CUS on 06/09/2022</h4>
-                                            <br />
-                                            <br />
 
-                                            <table role="presentation" border="0" cellpadding="0" cellspacing="0"
-                                                class="btn btn-primary">
-                                                <tbody>
-                                                    <tr>
-                                                        <td align="center">
-                                                            <table role="presentation" border="0" cellpadding="0"
-                                                                cellspacing="0">
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td> <a href="{{InviteLink}}"
-                                                                                target="{{InviteLink}}">Sign me up!</a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                            <p>See you in our Knowledge base!</p>
+                                    <tr class="logo">
+                                        <td align="center">
+                                            <img
+                                                src="https://raw.githubusercontent.com/davidoost/constants/main/logos/eva.png" />
                                         </td>
+                                    </tr>
+
+                                    <tr class="sub-logo">
+                                        <td align="center">
+                                            <img
+                                                src="https://raw.githubusercontent.com/davidoost/constants/main/logos/diamond.png" />
+                                        </td>
+                                    </tr>
+
+                                    <tr class="titles">
+                                        <td align="center">
+                                            <h1>Hi there,</h1>
+                                            <h1>we just dropped EVA Core {{Version}}</h1>
+                                            <h2>Stage name: <a href="{{GameLink}}">{{GameName}}</a></h2>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="title-info">
+                                        <td align="center">
+                                            <h3>Highlights</h3>
+                                            <p># {{HighLight1}}</p>
+                                            <p># {{HighLight2}}</p>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="title-info">
+                                        <td align="center">
+                                            <h3>Release dates</h3>
+                                            <p>Released on all test and acceptance environments on {{ReleaseDate1}}</p>
+                                            <p>Will be released to production in EUW and ASE on {{ReleaseDate2}}</p>
+                                            <p>Will be released to production in CUS on {{ReleaseDate3}}</p>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="button">
+                                        <table role="presentation" border="0" cellpadding="0" cellspacing="0"
+                                            class="btn btn-primary">
+                                            <tbody>
+                                                <tr>
+                                                    <td align="center">
+                                                        <table role="presentation" border="0" cellpadding="0"
+                                                            cellspacing="0">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <a href="{{Link}}" target="{{Link}}">View Drop
+                                                                            Notes!</a>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </tr>
                                 </table>
                             </td>
+
                         </tr>
 
                         <!-- END MAIN CONTENT AREA -->
@@ -441,10 +492,11 @@
                         <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                             <tr>
                                 <td class="content-block">
-                                    <span class="apple-link">New Black International BV, PJ Oudweg 4, 1314 CH Almere,
-                                        The Netherlands</span>
-                                    <br> Don't like these emails? <a
-                                        href="http://i.imgur.com/CScmqnj.gif">Unsubscribe</a>.
+                                    <span class="apple-link">Copyright © 2022 New Black International BV, All rights
+                                        reserved. <br /> You are receiving this email because you opted in via our <a
+                                            href="https://docs.newblack.io">website</a>.
+                                        <br> Don't like these emails? <a
+                                            href="https://docs.newblack.io/account">Unsubscribe</a>.
                                 </td>
                             </tr>
                         </table>
@@ -453,7 +505,6 @@
 
                 </div>
             </td>
-            <td> </td>
         </tr>
     </table>
 </body>
